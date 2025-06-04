@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملخص استشارتك - أفوكادو</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --avo-deep-space-blue: #0D0F2B;
+            --avo-dark-nebula: #1A1C3D; 
+            --avo-electric-blue: #00EFFF;
+            --avo-neon-pink: #F900BF;
+            --avo-cyber-purple: #8A2BE2;
+            --avo-text-light: #E8EFFF;
+            --avo-text-medium: #A8B0D3;
+            --star-gold: #FFD700; 
+        }
+
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            background-color: var(--avo-deep-space-blue);
+            color: var(--avo-text-light);
+        }
+
+        .avo-text-logo-accent1-themed { color: var(--avo-neon-pink); } 
+        .avo-text-logo-accent2-themed { color: var(--avo-electric-blue); }
+        
+        .themed-navbar {
+            background-color: var(--avo-deep-space-blue);
+            border-bottom: 1px solid var(--avo-dark-nebula);
+        }
+        .themed-footer {
+            background-color: var(--avo-deep-space-blue);
+            border-top: 1px solid var(--avo-dark-nebula);
+            color: var(--avo-text-medium);
+        }
+
+        .content-card-themed {
+            background-color: var(--avo-dark-nebula);
+        }
+        
+        .highlight-box-themed {
+            background-color: var(--avo-deep-space-blue); 
+            border-left: 5px solid var(--avo-neon-pink); 
+            padding: 1.5rem;
+            border-radius: 0.5rem; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        .case-number-display {
+            background-color: var(--avo-dark-nebula); 
+            color: var(--avo-neon-pink);
+        }
+
+        .lawyer-card-themed {
+            border: 1px solid var(--avo-cyber-purple);
+            border-radius: 0.75rem; 
+            padding: 1.5rem;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+            background-color: var(--avo-deep-space-blue); 
+        }
+        .lawyer-card-themed:hover {
+            box-shadow: 0 0 15px rgba(0, 239, 255, 0.5); 
+            border-color: var(--avo-electric-blue);
+            transform: translateY(-3px);
+        }
+        .lawyer-specialization-themed {
+            color: var(--avo-neon-pink);
+        }
+        .lawyer-avatar-border-themed { border-color: var(--avo-electric-blue); }
+        .star-rating i { color: var(--star-gold); }
+
+        .section-title-underline-themed {
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--avo-neon-pink); 
+            margin-bottom: 1.5rem; 
+            font-weight: 700;
+            color: var(--avo-electric-blue); 
+        }
+
+        .action-button { 
+            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .action-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .avo-button-primary-themed { 
+            background-color: var(--avo-neon-pink); 
+            color: var(--avo-deep-space-blue); 
+            font-weight: bold;
+        }
+        .avo-button-primary-themed:hover { 
+            background-color: var(--avo-electric-blue);
+            color: var(--avo-deep-space-blue);
+            box-shadow: 0 0 15px var(--avo-electric-blue);
+        }
+         .avo-button-secondary-themed { 
+            background-color: var(--avo-electric-blue);
+            color: var(--avo-deep-space-blue);
+            font-weight: bold;
+        }
+        .avo-button-secondary-themed:hover {
+             background-color: var(--avo-neon-pink);
+             color: var(--avo-deep-space-blue);
+             box-shadow: 0 0 15px var(--avo-neon-pink);
+        }
+        .avo-button-outline-themed { 
+            background-color: transparent;
+            color: var(--avo-electric-blue);
+            border: 2px solid var(--avo-electric-blue);
+            font-weight: bold;
+        }
+        .avo-button-outline-themed:hover {
+            background-color: var(--avo-electric-blue);
+            color: var(--avo-deep-space-blue);
+            box-shadow: 0 0 15px var(--avo-electric-blue);
+        }
+    </style>
+</head>
+<body>
+    <nav class="themed-navbar text-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">
+                 أفوك<span class="avo-text-logo-accent1-themed">ا</span>د<span class="avo-text-logo-accent2-themed">و</span>
+            </a>
+            <a href="services-hub.html" class="text-sm hover:text-[var(--avo-neon-pink)] transition-colors" style="color: var(--avo-text-medium);">
+                <i class="fas fa-arrow-left ml-1 rtl:mr-1 rtl:ml-0"></i> العودة للخدمات
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto max-w-3xl py-10 px-4">
+        <div class="content-card-themed p-6 md:p-10 rounded-lg shadow-xl">
+            <header class="text-center mb-8">
+                <i class="fas fa-check-circle text-5xl md:text-6xl mb-3" style="color: var(--avo-electric-blue);"></i>
+                <h1 class="text-3xl md:text-4xl font-bold" style="color: var(--avo-electric-blue);">تم استلام طلبك بنجاح!</h1>
+                <p class="mt-2 text-lg" style="color: var(--avo-text-medium);">قام رفيق أفوكادو الذكي بتحليل مبدئي لمعلوماتك.</p>
+            </header>
+
+            <div class="highlight-box-themed mb-10 text-center">
+                <h2 class="text-xl font-semibold mb-2" style="color: var(--avo-text-light);">رقم ملف قضيتك هو:</h2>
+                <p class="text-3xl font-bold case-number-display py-3 px-6 rounded-md inline-block shadow-md">AVO-2025-0602-001</p>
+                <p class="text-sm mt-4" style="color: var(--avo-text-medium);">يرجى الاحتفاظ بهذا الرقم، ستحتاجه لمتابعة قضيتك وربطها بحسابك عند تسجيل الدخول أو إنشاء حساب جديد.</p>
+            </div>
+
+            <div class="my-10 text-center">
+                <img src="https://storage.googleapis.com/ai-studio-bucket-381467268314-us-west1/newB/image%20(47).png" alt="تم تجهيز ملفك بواسطة أفوكادو" class="max-w-full sm:max-w-md md:max-w-lg mx-auto rounded-lg shadow-lg border border-[var(--avo-cyber-purple)]">
+            </div>
+            
+            <section class="mb-10">
+                <h2 class="text-2xl section-title-underline-themed">اقتراحات المحامين من أفوكادو AI</h2>
+                <p class="mb-6" style="color: var(--avo-text-medium);">بناءً على تحليل استشارتك، نقترح عليك المحامين التاليين. يمكنك مراجعة ملفاتهم الشخصية واختيار الأنسب لك:</p>
+                <div class="space-y-6">
+                    <!-- Lawyer Card Example 1 -->
+                    <div class="lawyer-card-themed flex flex-col sm:flex-row items-center text-center sm:text-right rtl:sm:text-left">
+                        <img src="https://via.placeholder.com/100/0D0F2B/00EFFF?text=M1" alt="المحامي المقترح" class="w-24 h-24 rounded-full object-cover mb-4 sm:mb-0 sm:ml-6 rtl:sm:mr-6 rtl:sm:ml-0 shadow-md border-2 lawyer-avatar-border-themed">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold" style="color: var(--avo-text-light);">الأستاذ/ محمد عبد الله (مثال)</h3>
+                            <p class="lawyer-specialization-themed font-medium">متخصص في قضايا الأسرة والنزاعات المدنية</p>
+                            <p class="text-sm mt-1" style="color: var(--avo-text-medium);"><i class="fas fa-map-marker-alt text-xs text-[var(--avo-cyber-purple)]"></i> القاهرة الجديدة</p>
+                        </div>
+                        <a href="#" class="mt-4 sm:mt-0 avo-button-secondary-themed font-semibold py-2 px-5 rounded-md text-sm whitespace-nowrap action-button">
+                            عرض الملف الشخصي <i class="fas fa-arrow-left text-xs mr-1 rtl:ml-1 rtl:mr-0"></i>
+                        </a>
+                    </div>
+
+                    <!-- Lawyer Card Example 2 -->
+                    <div class="lawyer-card-themed flex flex-col sm:flex-row items-center text-center sm:text-right rtl:sm:text-left">
+                        <img src="https://via.placeholder.com/100/0D0F2B/F900BF?text=F2" alt="المحامية المقترحة" class="w-24 h-24 rounded-full object-cover mb-4 sm:mb-0 sm:ml-6 rtl:sm:mr-6 rtl:sm:ml-0 shadow-md border-2 lawyer-avatar-border-themed" style="border-color:var(--avo-neon-pink);">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold" style="color: var(--avo-text-light);">الأستاذة/ فاطمة علي (مثال)</h3>
+                            <p class="lawyer-specialization-themed font-medium">متخصصة في قضايا الشركات والعقود التجارية</p>
+                            <p class="text-sm mt-1" style="color: var(--avo-text-medium);"><i class="fas fa-map-marker-alt text-xs text-[var(--avo-cyber-purple)]"></i> الإسكندرية</p>
+                        </div>
+                         <a href="#" class="mt-4 sm:mt-0 avo-button-secondary-themed font-semibold py-2 px-5 rounded-md text-sm whitespace-nowrap action-button">
+                            عرض الملف الشخصي <i class="fas fa-arrow-left text-xs mr-1 rtl:ml-1 rtl:mr-0"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="text-sm mt-6 text-center" style="color: var(--avo-text-medium);">يمكنك أيضاً تصفح <a href="lawyer-directory.html" class="hover:brightness-125 font-semibold" style="color: var(--avo-neon-pink);">دليل المحامين الكامل</a> لاختيارات إضافية.</p>
+            </section>
+
+            <section class="text-center mt-12 pt-8 border-t" style="border-color: var(--avo-dark-nebula);">
+                <h2 class="text-xl font-semibold mb-4" style="color: var(--avo-electric-blue);">ماذا بعد؟</h2>
+                <p class="mb-6 leading-relaxed" style="color: var(--avo-text-medium);">
+                    لقد تم حفظ ملخص استشارتك ورقم ملف قضيتك. يمكنك الآن أخذ وقتك لمراجعة المحامين المقترحين. عند <a href="login.html" class="hover:brightness-125 font-semibold" style="color: var(--avo-neon-pink);">تسجيل الدخول</a> أو <a href="signup.html" class="hover:brightness-125 font-semibold" style="color: var(--avo-neon-pink);">إنشاء حساب جديد</a>، سيُطلب منك رقم ملف القضية هذا لربطه بحسابك ومتابعة الإجراءات مع المحامي الذي تختاره.
+                </p>
+                <div class="space-y-3 sm:space-y-0 sm:space-x-4 rtl:sm:space-x-reverse sm:flex sm:justify-center">
+                    <a href="lawyer-directory.html" class="w-full sm:w-auto inline-block avo-button-primary-themed font-bold py-3 px-8 rounded-lg action-button">
+                        <i class="fas fa-search mr-2 rtl:ml-2 rtl:mr-0"></i> تصفح دليل المحامين
+                    </a>
+                    <a href="index.html" class="w-full sm:w-auto inline-block avo-button-outline-themed font-semibold py-3 px-8 rounded-lg action-button">
+                       العودة إلى الصفحة الرئيسية
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <footer class="themed-footer py-8 text-center mt-12">
+        <div class="container mx-auto px-6">
+            <p>© <span id="currentYearCaseSummary"></span> K11 Production. جميع الحقوق محفوظة لتطبيق أفوكادو.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('currentYearCaseSummary').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

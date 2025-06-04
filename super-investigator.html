@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سوبر أفوكادو - بدء التحقيق الفائق</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root { 
+            --avo-deep-space-blue: #0A051E; 
+            --avo-electric-blue: #00EFFF;
+            --avo-neon-pink: #F000B8;
+            --avo-cyber-purple: #9400D3; 
+            --avo-text-light: #FFFFFF; 
+            --avo-text-medium-contrast: #B0B0D0; 
+            --avo-input-bg-transparent: rgba(26, 28, 61, 0.6);
+        }
+        body { 
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--avo-deep-space-blue); 
+            color: #E0E0E0; 
+        }
+        .super-avo-hero {
+            min-height: 100vh;
+            background-image: linear-gradient(rgba(10, 5, 30, 0.78), rgba(10, 5, 30, 0.94)), url('https://storage.googleapis.com/ai-studio-bucket-381467268314-us-west1/newB/image%20(42).png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .super-avo-title {
+            font-size: 3.5rem; 
+            font-weight: 800; 
+            letter-spacing: -0.025em;
+            text-shadow: 0 0 7px var(--avo-electric-blue), 0 0 12px var(--avo-electric-blue), 0 0 18px var(--avo-neon-pink), 0 0 25px var(--avo-neon-pink);
+            color: var(--avo-text-light);
+            margin-bottom: 0.5rem; 
+        }
+        .super-avo-subtitle {
+            font-size: 1.2rem; 
+            color: var(--avo-text-medium-contrast); 
+            max-width: 650px; 
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+        .input-field-super {
+            background-color: var(--avo-input-bg-transparent);
+            border: 1px solid var(--avo-cyber-purple); 
+            color: var(--avo-text-light);
+            padding: 0.85rem 1.25rem; 
+            border-radius: 0.5rem; 
+            width: 100%;
+            max-width: 550px; 
+            box-shadow: 0 0 15px rgba(148, 0, 211, 0.2); 
+            font-size: 1rem;
+        }
+        .input-field-super::placeholder {
+            color: rgba(176, 176, 208, 0.7); 
+        }
+        .input-field-super:focus {
+            outline: none;
+            border-color: var(--avo-neon-pink);
+            box-shadow: 0 0 10px rgba(240, 0, 184, 0.5), 0 0 20px rgba(240, 0, 184, 0.3);
+        }
+        .button-super-activate { 
+            background: linear-gradient(90deg, var(--avo-neon-pink), var(--avo-cyber-purple));
+            color: var(--avo-text-light);
+            font-weight: 700; 
+            padding: 0.85rem 2.5rem; 
+            border-radius: 0.5rem; 
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(240, 0, 184, 0.7); 
+            border: none;
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+        }
+        .button-super-activate:hover {
+            box-shadow: 0 0 35px var(--avo-neon-pink), 0 0 20px var(--avo-cyber-purple);
+            transform: translateY(-3px) scale(1.03); 
+        }
+        .k11-footer-super {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.75rem; 
+            color: rgba(176, 176, 208, 0.5);
+        }
+        @keyframes heroTextEntry {
+            from { opacity:0; transform: translateY(30px); }
+            to { opacity:1; transform: translateY(0); }
+        }
+        .animate-hero-text { animation: heroTextEntry 1s ease-out 0.3s forwards; opacity:0; }
+        .logo-icon-super { 
+             font-size: 3.5rem; 
+             color: var(--avo-electric-blue);
+             margin-bottom: 0.5rem;
+             text-shadow: 0 0 10px var(--avo-electric-blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="super-avo-hero">
+        <div class="animate-hero-text">
+            <div class="logo-icon-super">
+                <i class="fas fa-brain"></i>
+            </div>
+            <h1 class="super-avo-title"> 
+                سوبر أفوك<span style="color: var(--avo-neon-pink);">ا</span>د<span style="color: var(--avo-electric-blue);">و</span>
+            </h1>
+            <p class="super-avo-subtitle">
+                محركك للتحقيق الفائق. أدخل رقم المعرّف (هوية، قضية، قانون) لتحليل فوري وخطة عمل استراتيجية.
+            </p>
+        </div>
+        <!-- The form will eventually submit to a backend or trigger JS for processing -->
+        <form action="#" method="POST" class="w-full max-w-lg mt-6 animate-hero-text" style="animation-delay: 0.6s;">
+            <label for="id_number_super" class="sr-only">أدخل رقم المعرف</label>
+            <input type="text" name="id_number_super" id="id_number_super" 
+                   class="input-field-super mb-6" 
+                   placeholder="أدخل رقم المعرّف هنا لبدء التحقيق الفائق...">
+            <button type="submit" class="button-super-activate">
+                <i class="fas fa-rocket mr-2 rtl:ml-2 rtl:mr-0"></i> ابدأ التحليل الفائق الآن
+            </button>
+        </form>
+        <div class="k11-footer-super">
+             © <span id="currentYearSuperTool"></span> K11 Production. جميع الحقوق محفوظة لتطبيق أفوكادو.
+        </div>
+    </div>
+    <script>
+        document.getElementById('currentYearSuperTool').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - أفوكادو</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --avo-deep-space-blue: #0D0F2B;
+            --avo-dark-nebula: #1A1C3D; 
+            --avo-electric-blue: #00EFFF;
+            --avo-neon-pink: #F900BF;
+            --avo-cyber-purple: #8A2BE2;
+            --avo-text-light: #E8EFFF;
+            --avo-text-medium: #A8B0D3;
+        }
+
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            background-color: var(--avo-deep-space-blue);
+            color: var(--avo-text-light);
+        }
+
+        .avo-text-logo-accent1-themed { color: var(--avo-neon-pink); } 
+        .avo-text-logo-accent2-themed { color: var(--avo-electric-blue); }
+        
+        .page-container-themed {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem 1.5rem;
+        }
+        .form-card-themed {
+            background-color: var(--avo-dark-nebula); 
+            padding: 2.5rem; 
+            box-shadow: 0 10px 25px -5px rgba(0, 239, 255, 0.1), 0 8px 10px -6px rgba(0, 239, 255, 0.1); 
+            border-radius: 0.75rem;
+            border: 1px solid var(--avo-cyber-purple); 
+            width: 100%;
+            max-width: 28rem;
+        }
+        .form-title-themed {
+            margin-bottom: 0.5rem;
+            text-align: center;
+            font-size: 1.875rem; 
+            font-weight: 700; 
+            color: var(--avo-electric-blue); 
+        }
+        .form-label-themed {
+            color: var(--avo-text-medium);
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+        .form-input-themed {
+            background-color: var(--avo-deep-space-blue);
+            border: 1px solid var(--avo-cyber-purple);
+            color: var(--avo-text-light);
+            appearance: none;
+            width: 100%;
+            padding: 0.75rem 1rem; 
+            border-radius: 0.375rem; 
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.5);
+        }
+        .form-input-themed::placeholder {
+            color: var(--avo-text-medium);
+            opacity: 0.7;
+        }
+        .form-input-themed:focus {
+            outline: none;
+            border-color: var(--avo-neon-pink);
+            box-shadow: 0 0 0 3px rgba(249, 0, 191, 0.4), inset 0 1px 2px rgba(0,0,0,0.5); 
+        }
+        .form-checkbox-themed {
+            accent-color: var(--avo-neon-pink);
+            height: 1rem; 
+            width: 1rem; 
+            border-radius: 0.25rem; 
+            border: 1px solid var(--avo-cyber-purple);
+        }
+        .form-checkbox-themed:focus {
+             box-shadow: 0 0 0 3px rgba(249, 0, 191, 0.4);
+             outline: none;
+        }
+
+        .avo-button-primary-themed { 
+            background-color: var(--avo-neon-pink); 
+            color: var(--avo-deep-space-blue); 
+            font-weight: bold;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.85rem 1rem; 
+            border: 1px solid transparent;
+            border-radius: 0.375rem; 
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+            font-size: 0.875rem; 
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .avo-button-primary-themed:hover { 
+            background-color: var(--avo-electric-blue);
+            color: var(--avo-deep-space-blue);
+            box-shadow: 0 0 15px var(--avo-electric-blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container-themed">
+        <div class="sm:mx-auto sm:w-full sm:max-w-md mb-8 text-center">
+             <a href="index.html" class="inline-flex items-center">
+                <i class="fas fa-shield-alt text-4xl md:text-5xl avo-text-logo-accent2-themed mr-2 rtl:ml-2 rtl:mr-0"></i>
+                <h1 class="text-3xl md:text-4xl font-bold cursor-pointer" style="color: var(--avo-text-light);">
+                     أفوك<span class="avo-text-logo-accent1-themed">ا</span>د<span class="avo-text-logo-accent2-themed">و</span>
+                </h1>
+            </a>
+        </div>
+        <div class="sm:mx-auto sm:w-full sm:max-w-md">
+            <h2 class="form-title-themed">
+                تسجيل الدخول إلى حسابك
+            </h2>
+            <p class="mt-2 text-center text-sm" style="color: var(--avo-text-medium);">
+                أو
+                <a href="signup.html" class="font-medium hover:brightness-125" style="color: var(--avo-neon-pink);">
+                    أنشئ حساباً جديداً
+                </a>
+            </p>
+        </div>
+        <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+            <div class="form-card-themed">
+                <form class="space-y-6" action="#" method="POST">
+                    <div>
+                        <label for="emailLogin" class="form-label-themed">
+                            البريد الإلكتروني
+                        </label>
+                        <div class="mt-1">
+                            <input id="emailLogin" name="email" type="email" autocomplete="email" required
+                                   class="form-input-themed">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="passwordLogin" class="form-label-themed">
+                            كلمة المرور
+                        </label>
+                        <div class="mt-1">
+                            <input id="passwordLogin" name="password" type="password" autocomplete="current-password" required
+                                   class="form-input-themed">
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <input id="remember-me-login" name="remember-me" type="checkbox"
+                                   class="form-checkbox-themed">
+                            <label for="remember-me-login" class="ml-2 block text-sm rtl:mr-2 rtl:ml-0" style="color: var(--avo-text-light);">
+                                تذكرني
+                            </label>
+                        </div>
+                        <div class="text-sm">
+                            <a href="#" class="font-medium hover:brightness-125" style="color: var(--avo-neon-pink);">
+                                هل نسيت كلمة المرور؟
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit"
+                                class="avo-button-primary-themed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[var(--avo-dark-nebula)] focus:ring-[var(--avo-neon-pink)]">
+                            تسجيل الدخول
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

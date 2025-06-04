@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استشارة أولية مع رفيق أفوكادو الذكي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --avo-deep-space-blue: #0D0F2B;
+            --avo-dark-nebula: #1A1C3D; 
+            --avo-electric-blue: #00EFFF;
+            --avo-neon-pink: #F900BF;
+            --avo-cyber-purple: #8A2BE2;
+            --avo-text-light: #E8EFFF;
+            --avo-text-medium: #A8B0D3;
+            --chat-bubble-ai-bg: #20254B; 
+            --avo-error-red: #F87171; 
+            --avo-error-text-darkbg: #FECACA; 
+            --chat-bubble-error-bg: #7F1D1D; 
+        }
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            background-color: var(--avo-deep-space-blue);
+            color: var(--avo-text-light);
+        }
+        .avo-text-logo-accent1-themed { color: var(--avo-neon-pink); } 
+        .avo-text-logo-accent2-themed { color: var(--avo-electric-blue); }
+        .themed-navbar {
+            background-color: var(--avo-deep-space-blue);
+            border-bottom: 1px solid var(--avo-dark-nebula);
+        }
+        .themed-footer {
+            background-color: var(--avo-deep-space-blue);
+            border-top: 1px solid var(--avo-dark-nebula);
+            color: var(--avo-text-medium);
+        }
+        .content-card-themed {
+            background-color: var(--avo-dark-nebula);
+        }
+        .chat-bubble {
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem; 
+            margin-bottom: 0.5rem;
+            max-width: 80%;
+            word-wrap: break-word;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+        .ai-bubble {
+            background-color: var(--chat-bubble-ai-bg); 
+            color: var(--avo-text-light); 
+            align-self: flex-start;
+            border-bottom-right-radius: 0.125rem; 
+        }
+        .user-bubble {
+            background-color: var(--avo-neon-pink); 
+            color: var(--avo-deep-space-blue); 
+            font-weight: 600;
+            align-self: flex-end;
+            border-bottom-left-radius: 0.125rem;
+        }
+        .error-bubble { 
+            background-color: var(--chat-bubble-error-bg); 
+            color: var(--avo-error-text-darkbg); 
+            border: 1px solid var(--avo-error-red);
+            align-self: flex-start; 
+            border-bottom-right-radius: 0.125rem;
+        }
+        .chat-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem; 
+            margin: 0 0.5rem; 
+            flex-shrink: 0; 
+        }
+        .ai-chat-icon {
+            background-color: var(--avo-electric-blue); 
+            color: var(--avo-deep-space-blue); 
+        }
+        .error-chat-icon { 
+            background-color: var(--avo-error-red); 
+            color: white;
+        }
+        .chat-area-themed {
+            background-color: var(--avo-deep-space-blue);
+            border: 1px solid var(--avo-cyber-purple);
+        }
+        .form-input-themed { 
+            background-color: var(--avo-deep-space-blue);
+            border: 1px solid var(--avo-cyber-purple); 
+            color: var(--avo-text-light);
+        }
+        .form-input-themed::placeholder {
+            color: var(--avo-text-medium);
+            opacity: 0.8;
+        }
+        .form-input-themed:focus {
+            outline: none;
+            border-color: var(--avo-neon-pink);
+            box-shadow: 0 0 0 3px rgba(249, 0, 191, 0.4);
+        }
+        .avo-button-primary-themed { 
+            background-color: var(--avo-neon-pink); 
+            color: var(--avo-deep-space-blue); 
+            font-weight: bold;
+        }
+        .avo-button-primary-themed:hover { 
+            background-color: var(--avo-electric-blue);
+            color: var(--avo-deep-space-blue);
+            box-shadow: 0 0 15px var(--avo-electric-blue);
+        }
+        .avo-button-secondary-themed { 
+            background-color: var(--avo-electric-blue);
+            color: var(--avo-deep-space-blue);
+            font-weight: bold;
+        }
+        .avo-button-secondary-themed:hover {
+            background-color: var(--avo-neon-pink);
+            color: var(--avo-deep-space-blue);
+            box-shadow: 0 0 15px var(--avo-neon-pink);
+        }
+        .thematic-image-container {
+            margin-bottom: 1.5rem;
+            border-radius: 0.5rem; 
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+            border: 1px solid var(--avo-cyber-purple); 
+        }
+        .thematic-image-container img {
+            width: 100%;
+            max-height: 300px; 
+            object-fit: cover; 
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="themed-navbar text-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">
+                 أفوك<span class="avo-text-logo-accent1-themed">ا</span>د<span class="avo-text-logo-accent2-themed">و</span>
+            </a>
+            <a href="services-hub.html" class="text-sm hover:text-[var(--avo-neon-pink)] transition-colors" style="color: var(--avo-text-medium);">
+                <i class="fas fa-arrow-left ml-1 rtl:mr-1 rtl:ml-0"></i> العودة للخدمات
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto max-w-2xl py-8 px-4">
+        <div class="content-card-themed p-6 rounded-lg shadow-xl">
+            <header class="text-center mb-6 pb-4 border-b" style="border-color: var(--avo-dark-nebula);">
+                <div class="flex justify-center items-center mb-2">
+                    <div class="chat-icon ai-chat-icon text-2xl"><i class="fas fa-robot"></i></div>
+                    <h1 class="text-2xl font-bold ml-3 rtl:mr-3 rtl:ml-0" style="color: var(--avo-electric-blue);">استشارة أولية مع رفيق أفوكادو الذكي</h1>
+                </div>
+                <p class="text-sm" style="color: var(--avo-text-medium);">دعنا نساعدك في فهم خطواتك الأولى وجمع المعلومات اللازمة.</p>
+            </header>
+
+            <div class="thematic-image-container">
+                <img src="https://storage.googleapis.com/ai-studio-bucket-381467268314-us-west1/newB/image%20(51).png" alt="تحليل وجمع معلومات بواسطة أفوكادو AI">
+            </div>
+
+            <div id="chat-area" class="chat-area-themed space-y-6 h-[32rem] overflow-y-auto p-4 rounded-md mb-6 flex flex-col">
+                <!-- AI Greeting -->
+                <div class="flex items-end space-x-2 rtl:space-x-reverse">
+                    <div class="chat-icon ai-chat-icon"><i class="fas fa-robot"></i></div>
+                    <div class="chat-bubble ai-bubble">
+                        أهلاً بك! أنا رفيقك القانوني من أفوكادو. أنا هنا للاستماع إليك. من فضلك، صف لي مشكلتك الرئيسية أو السؤال الذي لديك.
+                    </div>
+                </div>
+
+                <div class="flex items-end space-x-2 rtl:space-x-reverse self-end">
+                     <div class="chat-bubble user-bubble">
+                        (مثال: أواجه مشكلة مع مالك العقار بخصوص عقد الإيجار...)
+                    </div>
+                </div>
+                
+                <div class="flex items-end space-x-2 rtl:space-x-reverse">
+                    <div class="chat-icon ai-chat-icon"><i class="fas fa-robot"></i></div>
+                    <div class="chat-bubble ai-bubble">
+                       إذا كان لديك أي مستندات ذات صلة (مثل عقد، إنذار، صور)، يمكنك رفعها الآن لمساعدتي في التحليل.
+                       <label for="documentUploadAiChat" class="mt-2 block cursor-pointer hover:brightness-125" style="color: var(--avo-neon-pink);">
+                           <i class="fas fa-paperclip mr-1"></i> اضغط هنا لرفع الملفات (اختياري)
+                       </label>
+                       <input type="file" id="documentUploadAiChat" name="documentUploadAiChat" multiple class="hidden">
+                       <div id="file-list-ai-chat" class="text-xs mt-1" style="color: var(--avo-text-medium);"></div>
+                    </div>
+                </div>
+                
+                <div class="flex items-end space-x-2 rtl:space-x-reverse">
+                    <div class="chat-icon ai-chat-icon"><i class="fas fa-robot"></i></div>
+                    <div class="chat-bubble ai-bubble">
+                        شكراً لك على تقديم هذه المعلومات. بناءً عليها، سأقوم الآن بتجهيز ملخص مبدئي لحالتك واقتراحات للخطوات التالية...
+                    </div>
+                </div>
+            </div> 
+
+            <div class="mt-6 pt-4 border-t chat-input-area" style="border-color: var(--avo-dark-nebula);">
+                <textarea id="userInputAiChat" class="form-input-themed w-full p-3 border rounded-md" rows="3" placeholder="اكتب ردك هنا..."></textarea>
+                <div class="mt-3 flex flex-col sm:flex-row justify-between items-center gap-3">
+                    <button id="sendChatMessageButton" class="w-full sm:w-auto avo-button-primary-themed font-semibold py-2 px-6 rounded-md disabled:opacity-50">
+                        إرسال <i class="fas fa-paper-plane ml-2 rtl:mr-2 rtl:ml-0"></i>
+                    </button>
+                    <a href="ai-summary.html" class="w-full sm:w-auto inline-block text-center avo-button-secondary-themed font-semibold py-2 px-6 rounded-md">
+                        <i class="fas fa-check-circle mr-2 rtl:ml-2 rtl:mr-0"></i> إنهاء المحادثة وعرض الملخص
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="themed-footer py-8 text-center mt-12">
+        <div class="container mx-auto px-6">
+            <p>© <span id="currentYearAiChatPage"></span> K11 Production. جميع الحقوق محفوظة لتطبيق أفوكادو.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('currentYearAiChatPage').textContent = new Date().getFullYear();
+        
+        const chatArea = document.getElementById('chat-area');
+        const userInput = document.getElementById('userInputAiChat');
+        const sendButton = document.getElementById('sendChatMessageButton');
+        const fileUploadInput = document.getElementById('documentUploadAiChat');
+        const fileListDiv = document.getElementById('file-list-ai-chat');
+
+        function displayChatMessage(message, type = 'ai') {
+            if (!chatArea) return; 
+
+            const messageWrapper = document.createElement('div');
+            messageWrapper.classList.add('flex', 'items-end', 'space-x-2', 'rtl:space-x-reverse', 'max-w-full');
+
+            const iconDiv = document.createElement('div');
+            iconDiv.classList.add('chat-icon');
+
+            const bubbleDiv = document.createElement('div');
+            bubbleDiv.classList.add('chat-bubble');
+            bubbleDiv.textContent = message; 
+
+            if (type === 'ai') {
+                iconDiv.classList.add('ai-chat-icon');
+                iconDiv.innerHTML = '<i class="fas fa-robot"></i>';
+                bubbleDiv.classList.add('ai-bubble');
+                messageWrapper.appendChild(iconDiv);
+                messageWrapper.appendChild(bubbleDiv);
+            } else if (type === 'user') {
+                bubbleDiv.classList.add('user-bubble');
+                messageWrapper.classList.add('self-end');
+                messageWrapper.appendChild(bubbleDiv); 
+            } else if (type === 'error') {
+                iconDiv.classList.add('error-chat-icon');
+                iconDiv.innerHTML = '<i class="fas fa-exclamation-triangle"></i>';
+                bubbleDiv.classList.add('error-bubble');
+                messageWrapper.appendChild(iconDiv);
+                messageWrapper.appendChild(bubbleDiv);
+            }
+            
+            chatArea.appendChild(messageWrapper);
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
+
+        if (chatArea) { 
+            chatArea.scrollTop = chatArea.scrollHeight; 
+        }
+        
+        if (sendButton && userInput && chatArea) { 
+            sendButton.addEventListener('click', function() {
+                const messageText = userInput.value.trim();
+                if (messageText) {
+                    displayChatMessage(messageText, 'user');
+                    userInput.value = ''; 
+
+                    setTimeout(() => {
+                        const shouldError = Math.random() < 0.3; 
+                        if (shouldError) {
+                            displayChatMessage("عفواً، لم نتمكن من معالجة طلبك. يرجى المحاولة مرة أخرى لاحقاً.", 'error');
+                        } else {
+                            displayChatMessage("شكراً لك. كيف يمكنني مساعدتك أيضاً؟", 'ai');
+                        }
+                    }, 1000);
+                }
+            });
+
+            userInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault(); 
+                    sendButton.click(); 
+                }
+            });
+        }
+
+        if (fileUploadInput && fileListDiv) { 
+            fileUploadInput.addEventListener('change', function() {
+                let fileNames = [];
+                for (let i = 0; i < this.files.length; i++) {
+                    fileNames.push(this.files[i].name);
+                }
+                if (fileNames.length > 0) {
+                    fileListDiv.innerHTML = "الملفات المختارة: " + fileNames.join(', ');
+                } else {
+                    fileListDiv.innerHTML = "";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

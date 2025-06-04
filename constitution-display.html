@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدستور المصري وتاريخ العدالة - أفوكادو</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --avo-electric-blue: #00EFFF;
+            --avo-neon-pink: #F900BF;
+            --scholarly-dark-bg: #10101A;
+            --scholarly-dark-text: #E0E0E0;
+            --scholarly-navbar-bg: rgba(26, 30, 48, 0.85);
+            --scholarly-link-color: #87CEFA;
+            --scholarly-link-hover: #ADD8E6;
+            --scholarly-section-bg: rgba(26, 30, 48, 0.6);
+            --scholarly-section-border: rgba(135, 206, 250, 0.2);
+            --scholarly-summary-bg: rgba(30, 35, 58, 0.7);
+            --scholarly-summary-hover-bg: rgba(40, 45, 70, 0.8);
+            --scholarly-summary-open-bg: rgba(135, 206, 250, 0.1);
+            --scholarly-content-bg: rgba(10, 5, 30, 0.5);
+            --scholarly-content-text: #C0C0C0;
+            --scholarly-footer-bg: #0A051E;
+            --scholarly-footer-text: #A0A0A0;
+            --scholarly-footer-border: rgba(135, 206, 250, 0.1);
+            --avo-text-medium: #b3c6e8;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--scholarly-dark-bg);
+            color: var(--scholarly-dark-text);
+            scroll-behavior: smooth;
+        }
+        .avo-text-logo-accent1-themed { color: var(--avo-neon-pink); }
+        .avo-text-logo-accent2-themed { color: var(--avo-electric-blue); }
+        .dark-theme-navbar {
+            background-color: var(--scholarly-navbar-bg);
+            backdrop-filter: blur(5px);
+        }
+        .dark-theme-link {
+            color: var(--scholarly-link-color);
+            transition: color 0.2s;
+        }
+        .dark-theme-link:hover {
+            color: var(--scholarly-link-hover);
+            text-decoration: underline;
+        }
+        .page-main-title {
+            font-size: 2.75rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            text-shadow: 0 0 8px rgba(135, 206, 250, 0.5);
+            margin-bottom: 1.5rem;
+        }
+        .section-container-dark {
+            background-color: var(--scholarly-section-bg);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--scholarly-section-border);
+        }
+        .section-heading-dark {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--scholarly-link-color);
+            border-bottom: 2px solid var(--scholarly-link-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        .placeholder-image-dark {
+            border-radius: 0.5rem;
+            object-fit: cover;
+            border: 2px solid rgba(135, 206, 250, 0.3);
+            max-height: 400px;
+            width: 100%;
+        }
+        details.constitution-part-dark > summary {
+            list-style: none;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.25rem;
+            padding: 1rem;
+            background-color: var(--scholarly-summary-bg);
+            border: 1px solid var(--scholarly-section-border);
+            border-radius: 0.375rem;
+            margin-bottom: 0.5rem;
+            color: var(--scholarly-dark-text);
+            transition: background-color 0.2s ease-in-out;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        details.constitution-part-dark > summary:hover {
+            background-color: var(--scholarly-summary-hover-bg);
+        }
+        details.constitution-part-dark[open] > summary {
+            background-color: var(--scholarly-summary-open-bg);
+            color: var(--scholarly-link-color);
+        }
+        details.constitution-part-dark > summary::-webkit-details-marker { display: none; }
+        details.constitution-part-dark > summary::marker { display: none; }
+        .summary-icon {
+            margin-right: 0.75rem;
+            font-size: 0.8em;
+            color: var(--scholarly-link-color);
+            transition: transform 0.2s ease-in-out;
+            display: inline-block;
+        }
+        details.constitution-part-dark[open] > summary .summary-icon {
+            transform: rotate(180deg);
+        }
+        .constitution-content-dark {
+            padding: 1rem 1.5rem;
+            background-color: var(--scholarly-content-bg);
+            border: 1px solid rgba(135, 206, 250, 0.1);
+            border-top: none;
+            border-radius: 0 0 0.375rem 0.375rem;
+            color: var(--scholarly-content-text);
+        }
+        .constitution-content-dark a { color: var(--scholarly-link-color); }
+        .constitution-content-dark a:hover { text-decoration: underline; }
+        .dark-footer {
+            background-color: var(--scholarly-footer-bg);
+            color: var(--scholarly-footer-text);
+            border-top: 1px solid var(--scholarly-footer-border);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="dark-theme-navbar text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold hover:opacity-80 transition-opacity">
+                أفوك<span class="avo-text-logo-accent1-themed">ا</span>د<span class="avo-text-logo-accent2-themed">و</span>
+            </a>
+            <a href="index.html" class="text-sm dark-theme-link">
+                <i class="fas fa-home mr-1 rtl:ml-1 rtl:mr-0"></i> العودة للرئيسية
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto py-10 px-4">
+        <header class="mb-12 text-center">
+            <h1 class="page-main-title">الدستور المصري: تاريخ وهوية</h1>
+            <p class="text-lg max-w-3xl mx-auto" style="color: var(--avo-text-medium);">
+                نظرة على الأسس القانونية والمسيرة التاريخية للعدالة في مصر، ومفتاحك لفهم قواعدها الأساسية.
+            </p>
+        </header>
+
+        <div class="mb-12 section-container-dark">
+            <img src="https://images.unsplash.com/photo-1589829518330-24649350861b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1200&h=400&fit=crop"
+                 alt="صورة فنية تعبر عن القانون والتاريخ المصري"
+                 class="placeholder-image-dark">
+            <p class="text-xs text-center mt-2" style="color: var(--avo-text-medium); opacity: 0.7;">صورة تمثيلية مؤقتة. يمكنك استبدالها بالصورة التي تختارها.</p>
+        </div>
+
+        <section class="section-container-dark">
+            <h2 class="section-heading-dark">رسالة تاريخية عن العدالة في مصر</h2>
+            <div class="prose prose-invert max-w-none leading-relaxed" style="color: var(--scholarly-dark-text);">
+                <p>
+                    (نص نائب) لطالما كانت العدالة مفهوماً محورياً في الحضارة المصرية منذ فجر التاريخ. تجلت في تعاليم ماعت، إلهة الحق والعدل والنظام الكوني، التي كانت ريشتها توزن بها قلوب الموتى في محكمة أوزوريس. هذا الإرث العميق للبحث عن الإنصاف واستقرار المجتمع بالقانون استمر عبر العصور... [أكمل هنا المحتوى التاريخي والأدبي الذي تصوره].
+                </p>
+                <p>
+                    ... تطور مفهوم العدالة وأدوات تحقيقها، لكن السعي نحوها ظل ثابتاً، يشكل وجدان الأمة ويوجه مسيرتها نحو بناء دولة القانون والمؤسسات...
+                </p>
+            </div>
+        </section>
+
+        <section class="section-container-dark">
+            <h2 class="section-heading-dark">نظرة على تاريخ المحاكم المصرية</h2>
+            <div class="prose prose-invert max-w-none leading-relaxed" style="color: var(--scholarly-dark-text);">
+                <p>
+                    (نص نائب) يعود تاريخ التنظيم القضائي الحديث في مصر إلى القرن التاسع عشر، مع إنشاء المحاكم المختلطة ثم المحاكم الأهلية. وقد مر النظام القضائي المصري بعدة مراحل تطور، شهدت إنشاء محاكم متنوعة على درجات مختلفة لضمان تحقيق العدالة وفصل السلطات... [أكمل هنا بمعلومات عن عدد المحاكم، تسلسلها التاريخي، أنواعها، إلخ].
+                </p>
+                <ul class="list-disc list-inside mt-4 space-y-1">
+                    <li>المحاكم الابتدائية (مثال)</li>
+                    <li>محاكم الاستئناف (مثال)</li>
+                    <li>محكمة النقض (مثال)</li>
+                    <li>المحكمة الدستورية العليا (مثال)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section-container-dark">
+            <h2 class="section-heading-dark">الدستور المصري الحالي (٢٠١٤ وتعديلاته)</h2>
+            <p class="mb-6" style="color: var(--avo-text-medium);">
+                تصفح أبواب وفصول الدستور الحالي لجمهورية مصر العربية.
+            </p>
+
+            <details class="constitution-part-dark">
+                <summary>الديباجة <span class="summary-icon"><i class="fas fa-chevron-down"></i></span></summary>
+                <div class="constitution-content-dark">
+                    <p>[نص الديباجة الكامل للدستور المصري... يمكنك إضافته هنا كاملاً أو كملخص مع رابط للنص الكامل].</p>
+                    <a href="#" class="dark-theme-link mt-2 inline-block">عرض نص الديباجة الكامل <i class="fas fa-external-link-alt text-xs"></i></a>
+                </div>
+            </details>
+
+            <details class="constitution-part-dark">
+                <summary>الباب الأول: الدولة (المواد ١ - ٦) <span class="summary-icon"><i class="fas fa-chevron-down"></i></span></summary>
+                <div class="constitution-content-dark">
+                    <p class="mb-2" style="color: var(--scholarly-content-text);">
+                        يشمل هذا الباب المواد التي تحدد هوية الدولة ونظامها الجمهوري، ومبادئ السيادة.
+                    </p>
+                    <a href="#" class="block py-1 dark-theme-link"><i class="fas fa-book-open ml-2 rtl:mr-2 rtl:ml-0"></i> الفصل الأول: مبادئ عامة (مثال)</a>
+                    <a href="#" class="block py-1 dark-theme-link"><i class="fas fa-gavel ml-2 rtl:mr-2 rtl:ml-0"></i> المادة ١: ...</a>
+                </div>
+            </details>
+
+            <details class="constitution-part-dark">
+                <summary>الباب الثاني: المقومات الأساسية للمجتمع (المواد ٧ - ٥٠) <span class="summary-icon"><i class="fas fa-chevron-down"></i></span></summary>
+                <div class="constitution-content-dark">
+                    <a href="#" class="block py-1 dark-theme-link"><i class="fas fa-users ml-2 rtl:mr-2 rtl:ml-0"></i> الفصل الأول: المقومات الاجتماعية</a>
+                </div>
+            </details>
+
+            <p class="mt-6 text-sm text-center" style="color: var(--avo-text-medium);">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="dark-theme-link hover:underline">
+                    للاطلاع على النص الكامل للدستور من مصدر رسمي <i class="fas fa-external-link-alt text-xs"></i>
+                </a>
+            </p>
+        </section>
+    </div>
+
+    <footer class="dark-footer py-8 text-center">
+        <div class="container mx-auto px-6">
+            <p>© <span id="currentYearConstitution"></span> K11 Production. جميع الحقوق محفوظة لتطبيق أفوكادو.</p>
+            <p class="text-xs mt-1 opacity-75">تم تطوير هذا التصميم المبدئي بواسطة Gemini بناءً على رؤيتك وأفكارك الفنية الفريدة.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('currentYearConstitution').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

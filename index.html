@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="أفوكادو: بوابتك للعدالة الرقمية في مصر. نقدم حلولاً قانونية مبتكرة وأدوات تكنولوجية متطورة، بالإضافة إلى سوبر أفوكادو للمحامين.">
+    <title>أفوكادو - بوابتك للعدالة الرقمية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --avo-deep-space-blue: #0D0F2B;
+            --avo-dark-nebula: #1A1C3D;
+            --avo-electric-blue: #00EFFF;
+            --avo-neon-pink: #F900BF;
+            --avo-cyber-purple: #8A2BE2;
+            --avo-text-light: #E8EFFF;
+            --avo-text-medium: #A8B0D3;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+            background-color: var(--avo-deep-space-blue);
+            color: var(--avo-text-light);
+        }
+        .hero-bg-image {
+            background-image: linear-gradient(rgba(13,15,43,0.7), rgba(13,15,43,0.85)), url('https://storage.googleapis.com/ai-studio-bucket-381467268314-us-west1/newB/image%20(32).png');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            color: var(--avo-electric-blue);
+        }
+        .feature-title { /* Title inside feature card */
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--avo-text-light);
+        }
+        .sub-section-title {
+            font-weight: 700;
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+            color: var(--avo-neon-pink);
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .avo-bg-navbar {
+            background-color: var(--avo-deep-space-blue);
+            border-bottom: 1px solid var(--avo-dark-nebula);
+        }
+        .avo-text-logo-accent1 { color: var(--avo-neon-pink); }
+        .avo-text-logo-accent2 { color: var(--avo-electric-blue); }
+
+        .avo-button-primary {
+            background-color: var(--avo-neon-pink);
+            color: var(--avo-deep-space-blue);
+            font-weight: bold;
+        }
+        .avo-button-primary:hover {
+            background-color: var(--avo-electric-blue);
+            color: var(--avo-deep-space-blue);
+            box-shadow: 0 0 15px var(--avo-electric-blue);
+        }
+        .avo-button-secondary {
+            background-color: var(--avo-electric-blue);
+            color: var(--avo-deep-space-blue);
+            font-weight: bold;
+        }
+        .avo-button-secondary:hover {
+             background-color: var(--avo-neon-pink);
+             color: var(--avo-deep-space-blue);
+             box-shadow: 0 0 15px var(--avo-neon-pink);
+        }
+
+        .feature-card {
+            background-color: var(--avo-dark-nebula);
+            color: var(--avo-text-medium);
+            border: 1px solid transparent;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .feature-card:hover {
+            border-color: var(--avo-electric-blue);
+            box-shadow: 0 0 15px rgba(0, 239, 255, 0.5);
+        }
+        .feature-card .icon-highlight {
+            color: var(--avo-electric-blue);
+        }
+        .feature-card-content {
+            flex-grow: 1;
+        }
+
+        .about-tag {
+            background-color: var(--avo-neon-pink);
+            color: var(--avo-deep-space-blue);
+            font-weight: bold;
+        }
+
+        .contact-input {
+            background-color: var(--avo-dark-nebula);
+            color: var(--avo-text-light);
+            border: 1px solid var(--avo-cyber-purple);
+        }
+        .contact-input::placeholder {
+            color: var(--avo-text-medium);
+        }
+        .contact-input:focus {
+            outline: none;
+            border-color: var(--avo-neon-pink);
+            box-shadow: 0 0 0 3px rgba(249, 0, 191, 0.4);
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar" class="avo-bg-navbar shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-shield-alt text-3xl avo-text-logo-accent2 mr-2 rtl:ml-2 rtl:mr-0"></i>
+                <a href="index.html" class="text-2xl font-bold" style="color: var(--avo-text-light);">
+                    أفوك<span class="avo-text-logo-accent1">ا</span>د<span class="avo-text-logo-accent2">و</span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-1 rtl:space-x-reverse text-sm">
+                <a href="#hero" class="px-3 py-2 rounded hover:text-[var(--avo-neon-pink)] transition-colors" style="color: var(--avo-text-medium);">الرئيسية</a>
+                <a href="#features" class="px-3 py-2 rounded hover:text-[var(--avo-neon-pink)] transition-colors" style="color: var(--avo-text-medium);">الأدوات</a>
+                <a href="#about" class="px-3 py-2 rounded hover:text-[var(--avo-neon-pink)] transition-colors" style="color: var(--avo-text-medium);">من نحن</a>
+                <a href="#contact" class="px-3 py-2 rounded hover:text-[var(--avo-neon-pink)] transition-colors" style="color: var(--avo-text-medium);">تواصل معنا</a>
+                <a href="login.html" class="avo-button-secondary px-4 py-2 rounded-md font-semibold transition-colors ml-2 rtl:mr-2 rtl:ml-0">تسجيل الدخول</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="focus:outline-none" aria-label="القائمة الرئيسية" aria-expanded="false" aria-controls="mobile-menu" style="color: var(--avo-text-light);">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden avo-bg-navbar text-sm" aria-hidden="true" style="color: var(--avo-text-medium);">
+            <a href="#hero" class="block px-4 py-3 hover:text-[var(--avo-neon-pink)] transition-colors">الرئيسية</a>
+            <a href="#features" class="block px-4 py-3 hover:text-[var(--avo-neon-pink)] transition-colors">الأدوات</a>
+            <a href="#about" class="block px-4 py-3 hover:text-[var(--avo-neon-pink)] transition-colors">من نحن</a>
+            <a href="#contact" class="block px-4 py-3 hover:text-[var(--avo-neon-pink)] transition-colors">تواصل معنا</a>
+            <a href="login.html" class="block px-4 py-3 avo-button-secondary font-semibold transition-colors text-center">تسجيل الدخول</a>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero-bg-image py-24 md:py-40 text-center relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight animate-fadeInUp" style="animation-delay: 0.2s; color: var(--avo-text-light);">
+                أفوك<span class="avo-text-logo-accent1">ا</span>د<span class="avo-text-logo-accent2">و</span>: بوابتك للعدالة الرقمية
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto animate-fadeInUp" style="animation-delay: 0.4s; color: var(--avo-text-medium);">
+                منصة تكنولوجية متطورة تربطك بالخبرة القانونية وتوفر لك الأدوات اللازمة لحماية حقوقك بكفاءة وثقة.
+            </p>
+            <a href="services-hub.html" class="avo-button-primary py-4 px-10 rounded-lg text-lg transition-transform transform hover:scale-105 shadow-xl animate-fadeInUp" style="animation-delay: 0.6s;">
+                اكتشف خدماتنا الآن
+            </a>
+        </div>
+    </header>
+
+    <section id="features" class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-center">أدوات أفوك<span class="avo-text-logo-accent1">ا</span>د<span class="avo-text-logo-accent2">و</span></h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="feature-card p-6 rounded-lg shadow-lg text-center">
+                    <div class="text-4xl icon-highlight mb-4"><i class="fas fa-users"></i></div>
+                    <div class="feature-card-content">
+                        <h3 class="feature-title">دليل محامين موثوق</h3>
+                        <p class="text-sm">ابحث وتواصل مع محامين متخصصين وموثوقين في جميع أنحاء مصر.</p>
+                    </div>
+                </div>
+                <div class="feature-card p-6 rounded-lg shadow-lg text-center">
+                    <div class="text-4xl icon-highlight mb-4"><i class="fas fa-brain"></i></div>
+                    <div class="feature-card-content">
+                        <h3 class="feature-title">استشارات قانونية ذكية</h3>
+                        <p class="text-sm">احصل على استشارات قانونية أولية وحلّل مستنداتك باستخدام الذكاء الاصطناعي.</p>
+                    </div>
+                </div>
+                <div class="feature-card p-6 rounded-lg shadow-lg text-center">
+                    <div class="text-4xl icon-highlight mb-4"><i class="fas fa-landmark"></i></div>
+                    <div class="feature-card-content">
+                        <h3 class="feature-title">أحدث التشريعات والقوانين</h3>
+                        <p class="text-sm">ابق على اطلاع دائم بآخر التحديثات في الجريدة الرسمية والقوانين المقترحة.</p>
+                    </div>
+                </div>
+                <div class="feature-card p-6 rounded-lg shadow-lg text-center">
+                    <div class="text-4xl icon-highlight mb-4"><i class="fas fa-hands-helping"></i></div>
+                    <div class="feature-card-content">
+                        <h3 class="feature-title">دعم المحامين الجدد</h3>
+                        <p class="text-sm">فرص تدريب، توجيه، وبناء سمعة مهنية للمحامين في بداية طريقهم.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Super Avocado Section/Callout -->
+            <div class="mt-16 text-center border-2 border-[var(--avo-neon-pink)] rounded-xl p-8 shadow-2xl" style="box-shadow: 0 0 30px var(--avo-neon-pink);">
+                <h3 class="sub-section-title mb-4">
+                    سوبر أفوك<span class="avo-text-logo-accent1">ا</span>د<span class="avo-text-logo-accent2">و</span>
+                    <span class="text-base font-normal block mt-1" style="color: var(--avo-text-medium);">(حصرياً للمحامين المحترفين)</span>
+                </h3>
+                <p class="text-lg max-w-xl mx-auto mb-8" style="color: var(--avo-text-light);">
+                    أطلق العنان لقوة الذكاء الاصطناعي الفائقة في ممارستك القانونية. أدوات تحليل وتحقيق مصممة لتعزيز قدراتك وتقديم رؤى استراتيجية.
+                </p>
+                <a href="lawyer-verification.html" class="avo-button-primary py-3 px-8 rounded-lg text-lg transition-transform transform hover:scale-105 shadow-xl animate-fadeInUp">
+                    تفعيل قوة سوبر أفوكادو
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24" style="background-color: var(--avo-dark-nebula);">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://storage.googleapis.com/ai-studio-bucket-381467268314-us-west1/newB/image%20(39).png" alt="رؤية أفوكادو لمستقبل العدالة الرقمية" class="rounded-lg shadow-xl" style="border: 2px solid var(--avo-cyber-purple);">
+                </div>
+                <div class="md:w-1/2 text-center md:text-right rtl:md:text-left">
+                    <h2 class="section-title">من نحن؟ رؤيتنا وقيمنا</h2>
+                    <p class="text-lg mb-6 leading-relaxed" style="color: var(--avo-text-medium);">
+                        في أفوكادو، مهمتنا هي الارتقاء بمنظومة العدالة وتيسير الوصول إليها. نلتزم بتطوير حلول قانونية مبتكرة تضع حقوقك في المقام الأول، مؤمنين بقدرة التكنولوجيا على تحقيق مستقبل قانوني أكثر عدلاً وشفافية للجميع.
+                    </p>
+                    <div class="space-x-3 rtl:space-x-reverse text-center md:text-right rtl:md:text-left">
+                        <span class="about-tag px-4 py-2 rounded-full text-sm font-semibold shadow">المساواة</span>
+                        <span class="about-tag px-4 py-2 rounded-full text-sm font-semibold shadow">العدل</span>
+                        <span class="about-tag px-4 py-2 rounded-full text-sm font-semibold shadow">الحقوق</span>
+                        <span class="about-tag px-4 py-2 rounded-full text-sm font-semibold shadow">الشفافية</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 avo-bg-navbar">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-6 section-title">مستقبل القانون يبدأ هن<span class="avo-text-logo-accent1">ا</span>.</h2>
+            <p class="text-lg mb-10 max-w-xl mx-auto" style="color: var(--avo-text-medium);">
+                أفوكادو قيد التطوير. كن من أوائل من يختبرون مستقبل الخدمات القانونية الرقمية.
+            </p>
+            <form class="max-w-lg mx-auto" id="contactForm" action="#" method="POST">
+                <div class="flex flex-col sm:flex-row gap-4 items-center">
+                    <div class="flex-grow w-full sm:w-auto">
+                        <label for="email-contact" class="sr-only">بريدك الإلكتروني</label>
+                        <input type="email" id="email-contact" name="email" placeholder="بريدك الإلكتروني" class="contact-input p-3 rounded-lg w-full outline-none" required>
+                    </div>
+                    <button type="submit" class="avo-button-primary py-3 px-8 rounded-lg text-lg w-full sm:w-auto transition-colors shadow-md hover:shadow-lg">سجل الآن</button>
+                </div>
+                <div id="formMessage" class="mt-4 text-center text-sm" style="color: var(--avo-text-medium);"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center" style="background-color: var(--avo-deep-space-blue); border-top: 1px solid var(--avo-dark-nebula);">
+        <div class="container mx-auto px-6">
+            <p class="text-lg" style="color: var(--avo-text-medium);">© <span id="currentYear"></span> K11 Production. جميع الحقوق محفوظة لتطبيق أفوكادو.</p>
+            <p class="text-sm mt-1" style="color: var(--avo-text-medium); opacity: 0.7;">تم تطوير هذا التصميم المبدئي بواسطة Gemini بناءً على رؤيتك وأفكارك القيمة.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.setAttribute('aria-hidden', 'true');
+            }
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.setAttribute('aria-hidden', isExpanded);
+            });
+        }
+    </script>
+</body>
+</html>

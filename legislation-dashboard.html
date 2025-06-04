@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة متابعة التشريعات - أفوكادو</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --avo-deep-space-blue: #0D0F2B;
+            --avo-dark-nebula: #1A1C3D; 
+            --avo-electric-blue: #00EFFF;
+            --avo-neon-pink: #F900BF;
+            --avo-cyber-purple: #8A2BE2;
+            --avo-text-light: #E8EFFF;
+            --avo-text-medium: #A8B0D3;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--avo-deep-space-blue);
+            color: var(--avo-text-light);
+        }
+        .avo-text-logo-accent1-themed { color: var(--avo-neon-pink); }
+        .avo-text-logo-accent2-themed { color: var(--avo-electric-blue); }
+        .legislation-main-content-bg-themed {
+            background-color: var(--avo-deep-space-blue);
+        }
+        .mobile-dash-menu-button-themed {
+            background-color: var(--avo-dark-nebula);
+            color: var(--avo-electric-blue);
+            border: 1px solid var(--avo-cyber-purple);
+        }
+        .mobile-dash-menu-themed {
+            background-color: var(--avo-dark-nebula);
+            color: var(--avo-text-light);
+        }
+        .translucent-card-header-themed {
+            background-color: rgba(26, 28, 61, 0.7);
+        }
+        .section-title-bar-themed {
+            background-color: var(--avo-dark-nebula);
+            color: var(--avo-electric-blue);
+            border-bottom: 2px solid var(--avo-electric-blue);
+        }
+        .legislation-card-themed {
+            background-color: var(--avo-dark-nebula);
+            border-radius: 0.75rem;
+            border: 1px solid var(--avo-cyber-purple);
+            box-shadow: 0 2px 10px rgba(0,239,255,0.07);
+            padding: 2rem;
+        }
+        .legislation-card-title-themed {
+            color: var(--avo-electric-blue);
+        }
+        .legislation-card-detail-themed {
+            color: var(--avo-text-medium);
+            margin-bottom: 0.2rem;
+        }
+        .status-badge {
+            padding: 0.25rem 1rem;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            display: inline-block;
+        }
+        .status-published-themed {
+            background-color: rgba(0,239,255,0.18);
+            color: var(--avo-electric-blue);
+        }
+        .status-proposed-themed {
+            background-color: rgba(249,0,191,0.15);
+            color: var(--avo-neon-pink);
+        }
+        .avo-button-secondary-themed {
+            background-color: var(--avo-electric-blue);
+            color: var(--avo-deep-space-blue);
+            font-weight: bold;
+            transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+        .avo-button-secondary-themed:hover {
+            background-color: var(--avo-neon-pink);
+            color: var(--avo-deep-space-blue);
+            box-shadow: 0 0 15px var(--avo-neon-pink);
+        }
+        .avo-button-outline-themed {
+            background-color: transparent;
+            color: var(--avo-electric-blue);
+            border: 2px solid var(--avo-electric-blue);
+            font-weight: bold;
+            transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+        .avo-button-outline-themed:hover {
+            background-color: var(--avo-electric-blue);
+            color: var(--avo-deep-space-blue);
+            box-shadow: 0 0 15px var(--avo-electric-blue);
+        }
+    </style>
+</head>
+<body>
+    <nav class="shadow-lg sticky top-0 z-50" style="background-color: var(--avo-dark-nebula); border-bottom:1px solid var(--avo-cyber-purple);">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <i class="fas fa-shield-alt text-2xl avo-text-logo-accent2-themed mr-2 rtl:ml-2 rtl:mr-0"></i>
+                <span class="text-2xl font-bold" style="color: var(--avo-text-light);">
+                    أفوك<span class="avo-text-logo-accent1-themed">ا</span>د<span class="avo-text-logo-accent2-themed">و</span>
+                </span>
+            </a>
+            <div class="hidden md:flex items-center space-x-4 rtl:space-x-reverse text-sm">
+                <a href="index.html" class="hover:text-[var(--avo-neon-pink)] transition-colors" style="color: var(--avo-text-medium);">الرئيسية</a>
+                <a href="services-hub.html" class="hover:text-[var(--avo-neon-pink)] transition-colors" style="color: var(--avo-text-medium);">الخدمات</a>
+                <a href="lawyer-directory.html" class="hover:text-[var(--avo-neon-pink)] transition-colors" style="color: var(--avo-text-medium);">دليل المحامين</a>
+                <a href="login.html" class="hover:text-[var(--avo-neon-pink)] transition-colors" style="color: var(--avo-text-medium);">تسجيل الدخول</a>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-1 p-6 md:p-8 overflow-y-auto legislation-main-content-bg-themed">
+        <div class="md:hidden flex justify-between items-center mb-6">
+            <a href="index.html" class="flex items-center">
+                <i class="fas fa-shield-alt text-2xl avo-text-logo-accent2-themed mr-2 rtl:ml-2 rtl:mr-0"></i>
+                <h1 class="text-xl font-bold">
+                    أفوك<span class="avo-text-logo-accent1-themed">ا</span>د<span class="avo-text-logo-accent2-themed">و</span>
+                </h1>
+            </a>
+            <button id="mobile-dash-menu-button" class="mobile-dash-menu-button-themed focus:outline-none backdrop-blur-sm p-2 rounded-md">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobile-dash-menu" class="md:hidden hidden mobile-dash-menu-themed rounded-md shadow-lg mb-4 text-sm">
+            <a href="#" class="block px-4 py-2">لوحة التحكم</a>
+            <a href="#latest-enacted-dash" class="block px-4 py-2">أحدث التشريعات</a>
+            <a href="#proposed-laws-dash" class="block px-4 py-2">القوانين المقترحة</a>
+            <a href="#" class="block px-4 py-2">البحث في القوانين</a>
+            <a href="#" class="block px-4 py-2">تنبيهاتي التشريعية</a>
+            <a href="index.html" class="block px-4 py-2 border-t">العودة للرئيسية</a>
+        </div>
+
+        <header class="mb-8 p-4 translucent-card-header-themed rounded-lg shadow">
+            <h2 class="text-3xl font-bold" style="color: var(--avo-electric-blue);">متابعة التشريعات والقوانين</h2>
+            <p class="mt-1" style="color: var(--avo-text-medium);">ابق على اطلاع دائم بآخر المستجدات القانونية في مصر.</p>
+        </header>
+
+        <div class="mb-8 p-4 translucent-card-header-themed rounded-lg shadow">
+            <div class="relative">
+                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none rtl:left-0 rtl:pr-0 rtl:pl-3">
+                    <i class="fas fa-search" style="color: var(--avo-text-medium);"></i>
+                </div>
+                <input type="search" placeholder="ابحث عن قانون، قرار، أو تشريع محدد..."
+                    class="form-input-themed p-3 pl-10 pr-4 rtl:pr-10 rtl:pl-4 border rounded-lg shadow-sm sm:text-sm">
+            </div>
+        </div>
+
+        <section id="latest-enacted-dash" class="mb-12">
+            <h3 class="text-2xl font-semibold section-title-bar-themed mb-6 pb-2 inline-block px-3 py-1 rounded-t-lg">
+                <i class="fas fa-gavel mr-2 rtl:ml-2 rtl:mr-0" style="color:var(--avo-electric-blue)"></i> أحدث القوانين والقرارات المنشورة
+            </h3>
+            <div class="space-y-6">
+                <div class="legislation-card-themed">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="text-xl font-bold legislation-card-title-themed">قانون رقم ١٥ لسنة ٢٠٢٥ بتعديل قانون حماية المستهلك</h4>
+                        <span class="status-badge status-published-themed">منشور</span>
+                    </div>
+                    <p class="legislation-card-detail-themed"><strong>المصدر:</strong> الجريدة الرسمية - العدد ٢٢ (مكرر أ)</p>
+                    <p class="legislation-card-detail-themed"><strong>تاريخ النشر:</strong> ٢٩ مايو ٢٠٢٥</p>
+                    <p class="leading-relaxed my-3 text-sm" style="color: var(--avo-text-light);">
+                        يهدف هذا القانون لتعزيز حماية المستهلك في التعاملات الإلكترونية وتوسيع نطاق تطبيق القانون.
+                    </p>
+                    <div class="mt-4">
+                        <a href="#" class="inline-block avo-button-secondary-themed px-4 py-2 rounded-md text-sm font-medium">
+                            <i class="fas fa-info-circle mr-1 rtl:ml-1 rtl:mr-0"></i> عرض التفاصيل
+                        </a>
+                        <a href="#" class="inline-block avo-button-outline-themed px-4 py-2 rounded-md text-sm font-medium ml-2 rtl:mr-2 rtl:ml-0">
+                            <i class="fas fa-download mr-1 rtl:ml-1 rtl:mr-0"></i> تحميل النص
+                        </a>
+                    </div>
+                </div>
+                <!-- Add more enacted law cards here -->
+            </div>
+        </section>
+
+        <section id="proposed-laws-dash" class="mb-12">
+            <h3 class="text-2xl font-semibold section-title-bar-themed mb-6 pb-2 inline-block px-3 py-1 rounded-t-lg">
+                <i class="fas fa-file-signature mr-2 rtl:ml-2 rtl:mr-0" style="color:var(--avo-neon-pink)"></i> مشاريع القوانين والتعديلات قيد المناقشة
+            </h3>
+            <div class="space-y-6">
+                <div class="legislation-card-themed">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="text-xl font-bold legislation-card-title-themed">مشروع قانون جديد للإجراءات الجنائية</h4>
+                        <span class="status-badge status-proposed-themed">قيد المناقشة</span>
+                    </div>
+                    <p class="legislation-card-detail-themed"><strong>الجهة:</strong> مقدم من الحكومة - أحيل للجنة التشريعية بمجلس النواب</p>
+                    <p class="legislation-card-detail-themed"><strong>تاريخ الإحالة (مثال):</strong> ٢٠ مايو ٢٠٢٥</p>
+                    <p class="leading-relaxed my-3 text-sm" style="color: var(--avo-text-light);">
+                        يتضمن تعديلات جوهرية لتسريع التقاضي وضمان حقوق المتهم والدفاع.
+                    </p>
+                    <div class="mt-4">
+                        <a href="#" class="inline-block avo-button-secondary-themed px-4 py-2 rounded-md text-sm font-medium">
+                            <i class="fas fa-eye mr-1 rtl:ml-1 rtl:mr-0"></i> متابعة تطورات المشروع
+                        </a>
+                    </div>
+                </div>
+                <!-- Add more proposed law cards here -->
+            </div>
+        </section>
+    </main>
+    <footer class="py-10 text-center" style="background-color: var(--avo-dark-nebula); color: var(--avo-text-medium); border-top:1px solid var(--avo-cyber-purple);">
+        <div class="container mx-auto px-6">
+            <p>© <span id="currentYearLegislation"></span> K11 Production. جميع الحقوق محفوظة لتطبيق أفوكادو.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('currentYearLegislation').textContent = new Date().getFullYear();
+        const mobileDashMenuButton = document.getElementById('mobile-dash-menu-button');
+        const mobileDashMenu = document.getElementById('mobile-dash-menu');
+        if (mobileDashMenuButton && mobileDashMenu) {
+            mobileDashMenuButton.addEventListener('click', () => {
+                mobileDashMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

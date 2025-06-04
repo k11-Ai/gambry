@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل المحامين - أفوكادو</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            /* Adopted Dark Neon Palette */
+            --avo-deep-space-blue: #0D0F2B;
+            --avo-dark-nebula: #1A1C3D; 
+            --avo-electric-blue: #00EFFF;
+            --avo-neon-pink: #F900BF;
+            --avo-cyber-purple: #8A2BE2;
+            --avo-text-light: #E8EFFF;
+            --avo-text-medium: #A8B0D3;
+            --star-gold: #FFD700; 
+        }
+
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            background-color: var(--avo-deep-space-blue);
+            color: var(--avo-text-light);
+        }
+
+        .avo-text-logo-accent1-themed { color: var(--avo-neon-pink); } 
+        .avo-text-logo-accent2-themed { color: var(--avo-electric-blue); }
+        
+        .themed-navbar {
+            background-color: var(--avo-deep-space-blue);
+            border-bottom: 1px solid var(--avo-dark-nebula);
+        }
+        .themed-footer {
+            background-color: var(--avo-deep-space-blue);
+            border-top: 1px solid var(--avo-dark-nebula);
+            color: var(--avo-text-medium);
+        }
+
+        .page-title-themed {
+            font-size: 2.25rem; 
+            font-weight: 700; 
+            color: var(--avo-electric-blue); 
+            margin-bottom: 0.75rem; 
+        }
+        .page-subtitle-themed {
+            font-size: 1.125rem; 
+            color: var(--avo-text-medium); 
+        }
+
+        .filter-section-themed {
+            margin-bottom: 2.5rem; 
+            padding: 1.5rem; 
+            background-color: var(--avo-dark-nebula); 
+            border-radius: 0.5rem; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            border: 1px solid var(--avo-cyber-purple);
+        }
+        
+        .form-label-themed { color: var(--avo-text-medium); display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.25rem;}
+        .form-input-themed, .form-select-themed {
+            background-color: var(--avo-deep-space-blue);
+            border: 1px solid var(--avo-cyber-purple);
+            color: var(--avo-text-light);
+            width: 100%;
+            padding: 0.75rem 1rem; 
+            border-radius: 0.375rem; 
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.5);
+        }
+        .form-input-themed::placeholder { color: var(--avo-text-medium); opacity: 0.7; }
+        .form-input-themed:focus, .form-select-themed:focus {
+            outline: none;
+            border-color: var(--avo-neon-pink);
+            box-shadow: 0 0 0 3px rgba(249, 0, 191, 0.4), inset 0 1px 2px rgba(0,0,0,0.5); 
+        }
+        .form-select-themed option {
+            background-color: var(--avo-dark-nebula);
+            color: var(--avo-text-light);
+        }
+
+
+        .lawyer-card-item-themed {
+            background-color: var(--avo-dark-nebula); 
+            border-radius: 0.75rem; 
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2), 0 4px 6px -2px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            border: 1px solid var(--avo-cyber-purple);
+            display: flex; /* Added for consistent card height */
+            flex-direction: column; /* Stack content vertically */
+        }
+        .lawyer-card-item-themed:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 239, 255, 0.4); 
+            border-color: var(--avo-electric-blue);
+        }
+        .lawyer-card-content-wrapper { /* New wrapper for text content */
+            flex-grow: 1; /* Allow text content to take available space */
+            display: flex;
+            flex-direction: column;
+        }
+        .lawyer-card-bio { /* Class for the bio paragraph */
+            flex-grow: 1; /* Make bio take up space to push button down */
+            min-height: 4rem; /* Ensures a minimum height for bio (h-16 equivalent) */
+        }
+        .lawyer-name-themed { color: var(--avo-electric-blue); }
+        .lawyer-spec-themed { color: var(--avo-neon-pink); }
+        .lawyer-avatar-border-themed { border-color: var(--avo-electric-blue); }
+        .star-rating i { color: var(--star-gold); }
+        .recommendation-badge-themed {
+            background-color: rgba(0, 239, 255, 0.15); 
+            color: var(--avo-electric-blue);
+        }
+         .expert-badge-themed {
+            background-color: rgba(249, 0, 191, 0.15); 
+            color: var(--avo-neon-pink);
+        }
+
+        .avo-button-primary-themed { 
+            background-color: var(--avo-neon-pink); 
+            color: var(--avo-deep-space-blue); font-weight: bold;
+        }
+        .avo-button-primary-themed:hover { 
+            background-color: var(--avo-electric-blue);
+            color: var(--avo-deep-space-blue); box-shadow: 0 0 15px var(--avo-electric-blue);
+        }
+        .avo-button-secondary-themed { 
+            background-color: var(--avo-electric-blue);
+            color: var(--avo-deep-space-blue); font-weight: bold;
+        }
+        .avo-button-secondary-themed:hover {
+             background-color: var(--avo-neon-pink);
+             color: var(--avo-deep-space-blue); box-shadow: 0 0 15px var(--avo-neon-pink);
+        }
+
+        /* Pagination Styles */
+        .pagination-themed a, .pagination-themed span {
+            border: 1px solid var(--avo-cyber-purple);
+            background-color: var(--avo-dark-nebula);
+            color: var(--avo-text-medium);
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .pagination-themed a:hover, .pagination-themed span:hover:not(.current-page) { /* Ensure current page doesn't get this hover */
+            background-color: var(--avo-deep-space-blue);
+            color: var(--avo-electric-blue);
+        }
+        .pagination-themed .current-page {
+            background-color: var(--avo-neon-pink);
+            color: var(--avo-deep-space-blue);
+            border-color: var(--avo-neon-pink);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="themed-navbar text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">
+                أفوك<span class="avo-text-logo-accent1-themed">ا</span>د<span class="avo-text-logo-accent2-themed">و</span>
+            </a>
+            <div>
+                <a href="legislation-dashboard.html" class="text-sm hover:text-[var(--avo-neon-pink)] transition-colors mx-2" style="color: var(--avo-text-medium);">التشريعات</a>
+                <a href="constitution-display.html" class="text-sm hover:text-[var(--avo-neon-pink)] transition-colors mx-2" style="color: var(--avo-text-medium);">الدستور</a>
+                <a href="index.html" class="text-sm hover:text-[var(--avo-neon-pink)] transition-colors" style="color: var(--avo-text-medium);">
+                    <i class="fas fa-home mr-1 rtl:ml-1 rtl:mr-0"></i> العودة للرئيسية
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto py-10 px-6">
+        <header class="mb-8 text-center">
+            <h1 class="page-title-themed">دليل المحامين</h1>
+            <p class="page-subtitle-themed">
+                ابحث وتواصل مع نخبة من المحامين المتخصصين في جميع أنحاء مصر.
+            </p>
+        </header>
+
+        <div class="filter-section-themed">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-end">
+                <div>
+                    <label for="search-name-dir" class="form-label-themed mb-1">البحث بالاسم:</label>
+                    <input type="text" id="search-name-dir" placeholder="ادخل اسم المحامي..."
+                           class="form-input-themed p-3 border rounded-md shadow-sm sm:text-sm">
+                </div>
+                <div>
+                    <label for="filter-specialization-dir" class="form-label-themed mb-1">التخصص:</label>
+                    <select id="filter-specialization-dir" class="form-select-themed p-3 border rounded-md shadow-sm sm:text-sm">
+                        <option value="">كل التخصصات</option>
+                        <option value="criminal">قانون جنائي</option>
+                        <option value="civil">قانون مدني</option>
+                        <option value="family">أحوال شخصية</option>
+                        <option value="corporate">قانون شركات وعقود</option>
+                        <option value="labor">قانون عمل</option>
+                        <option value="real_estate">عقارات وإيجارات</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="filter-location-dir" class="form-label-themed mb-1">المحافظة:</label>
+                    <select id="filter-location-dir" class="form-select-themed p-3 border rounded-md shadow-sm sm:text-sm">
+                        <option value="">كل المحافظات</option>
+                        <option value="cairo">القاهرة</option>
+                        <option value="giza">الجيزة</option>
+                        <option value="alexandria">الإسكندرية</option>
+                        <option value="mansoura">المنصورة</option>
+                    </select>
+                </div>
+                <button class="avo-button-primary-themed p-3 rounded-md transition-colors text-base font-semibold h-fit shadow-md">
+                    <i class="fas fa-search mr-2 rtl:ml-2 rtl:mr-0"></i> بحث
+                </button>
+            </div>
+        </div>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Lawyer Card 1 -->
+            <div class="lawyer-card-item-themed">
+                <div class="p-6 flex flex-col h-full">
+                    <div class="lawyer-card-content-wrapper">
+                        <div class="flex items-center mb-4">
+                            <img class="h-20 w-20 rounded-full object-cover border-2 lawyer-avatar-border-themed" src="https://via.placeholder.com/150/0D0F2B/00EFFF?text=أ+م" alt="صورة المحامي أحمد محمود">
+                            <div class="mr-4 rtl:ml-4 rtl:mr-0">
+                                <h3 class="text-2xl font-bold lawyer-name-themed">أحمد محمود</h3>
+                                <p class="lawyer-spec-themed font-semibold">قانون جنائي</p>
+                            </div>
+                        </div>
+                        <div class="text-sm mb-1" style="color: var(--avo-text-medium);"><i class="fas fa-map-marker-alt mr-2 rtl:ml-2 rtl:mr-0 text-[var(--avo-cyber-purple)]"></i>القاهرة</div>
+                        <div class="text-sm mb-3" style="color: var(--avo-text-medium);"><i class="fas fa-briefcase mr-2 rtl:ml-2 rtl:mr-0 text-[var(--avo-cyber-purple)]"></i>١٠ سنوات خبرة</div>
+                        <p class="text-sm leading-relaxed mb-4 lawyer-card-bio" style="color: var(--avo-text-light);"> 
+                            محام متخصص في القضايا الجنائية والدفاع أمام المحاكم، يتمتع بخبرة واسعة وسجل حافل بالنجاحات.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="star-rating text-lg">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span class="text-xs ml-1 rtl:mr-1 rtl:ml-0" style="color: var(--avo-text-medium);">(٤.٥)</span>
+                            </div>
+                            <span class="recommendation-badge-themed text-xs px-2 py-1 rounded-full font-semibold">موصى به</span>
+                        </div>
+                    </div>
+                    <a href="#" class="block w-full text-center avo-button-secondary-themed py-3 rounded-md transition-colors font-semibold mt-auto">
+                        <i class="fas fa-user-circle mr-2 rtl:ml-2 rtl:mr-0"></i>عرض الملف الشخصي
+                    </a>
+                </div>
+            </div>
+
+            <!-- Lawyer Card 2 -->
+            <div class="lawyer-card-item-themed">
+                 <div class="p-6 flex flex-col h-full">
+                    <div class="lawyer-card-content-wrapper">
+                        <div class="flex items-center mb-4">
+                            <img class="h-20 w-20 rounded-full object-cover border-2 lawyer-avatar-border-themed" style="border-color: var(--avo-neon-pink);" src="https://via.placeholder.com/150/0D0F2B/F900BF?text=ف+ح" alt="صورة المحامية فاطمة حسن">
+                            <div class="mr-4 rtl:ml-4 rtl:mr-0">
+                                <h3 class="text-2xl font-bold lawyer-name-themed">فاطمة حسن</h3>
+                                <p class="lawyer-spec-themed font-semibold">أحوال شخصية وأسرة</p>
+                            </div>
+                        </div>
+                        <div class="text-sm mb-1" style="color: var(--avo-text-medium);"><i class="fas fa-map-marker-alt mr-2 rtl:ml-2 rtl:mr-0 text-[var(--avo-cyber-purple)]"></i>الإسكندرية</div>
+                        <div class="text-sm mb-3" style="color: var(--avo-text-medium);"><i class="fas fa-briefcase mr-2 rtl:ml-2 rtl:mr-0 text-[var(--avo-cyber-purple)]"></i>٥ سنوات خبرة</div>
+                        <p class="text-sm leading-relaxed mb-4 lawyer-card-bio" style="color: var(--avo-text-light);">
+                            متخصصة في قضايا الأسرة، الطلاق، الحضانة، والميراث. تسعى دائماً لتقديم أفضل الحلول.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="star-rating text-lg">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                <span class="text-xs ml-1 rtl:mr-1 rtl:ml-0" style="color: var(--avo-text-medium);">(٤.٠)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="block w-full text-center avo-button-secondary-themed py-3 rounded-md transition-colors font-semibold mt-auto">
+                         <i class="fas fa-user-circle mr-2 rtl:ml-2 rtl:mr-0"></i>عرض الملف الشخصي
+                    </a>
+                </div>
+            </div>
+
+            <!-- Lawyer Card 3 -->
+             <div class="lawyer-card-item-themed">
+                <div class="p-6 flex flex-col h-full">
+                    <div class="lawyer-card-content-wrapper">
+                        <div class="flex items-center mb-4">
+                            <img class="h-20 w-20 rounded-full object-cover border-2 lawyer-avatar-border-themed" src="https://via.placeholder.com/150/0D0F2B/00EFFF?text=ي+إ" alt="صورة المحامي يوسف إبراهيم">
+                            <div class="mr-4 rtl:ml-4 rtl:mr-0">
+                                <h3 class="text-2xl font-bold lawyer-name-themed">يوسف إبراهيم</h3>
+                                <p class="lawyer-spec-themed font-semibold">قانون شركات وعقود</p>
+                            </div>
+                        </div>
+                        <div class="text-sm mb-1" style="color: var(--avo-text-medium);"><i class="fas fa-map-marker-alt mr-2 rtl:ml-2 rtl:mr-0 text-[var(--avo-cyber-purple)]"></i>الجيزة</div>
+                        <div class="text-sm mb-3" style="color: var(--avo-text-medium);"><i class="fas fa-briefcase mr-2 rtl:ml-2 rtl:mr-0 text-[var(--avo-cyber-purple)]"></i>١٥ سنة خبرة</div>
+                        <p class="text-sm leading-relaxed mb-4 lawyer-card-bio" style="color: var(--avo-text-light);">
+                           خبير في تأسيس الشركات، صياغة العقود التجارية، وتقديم الاستشارات للشركات.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="star-rating text-lg">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span class="text-xs ml-1 rtl:mr-1 rtl:ml-0" style="color: var(--avo-text-medium);">(٥.٠)</span>
+                            </div>
+                            <span class="expert-badge-themed text-xs px-2 py-1 rounded-full font-semibold">خبير معتمد</span>
+                        </div>
+                    </div>
+                    <a href="#" class="block w-full text-center avo-button-secondary-themed py-3 rounded-md transition-colors font-semibold mt-auto">
+                         <i class="fas fa-user-circle mr-2 rtl:ml-2 rtl:mr-0"></i>عرض الملف الشخصي
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="mt-12 flex justify-center pagination-themed">
+            <nav class="inline-flex rounded-md shadow">
+                <a href="#" class="px-4 py-2 border text-sm font-medium rounded-r-md rtl:rounded-l-md rtl:rounded-r-none">
+                    السابق
+                </a>
+                <a href="#" aria-current="page" class="px-4 py-2 border-t border-b text-sm font-medium current-page">
+                    1
+                </a>
+                <a href="#" class="px-4 py-2 border-t border-b text-sm font-medium">
+                    2
+                </a>
+                <a href="#" class="px-4 py-2 border-t border-b text-sm font-medium">
+                    3
+                </a>
+                <a href="#" class="px-4 py-2 border text-sm font-medium rounded-l-md rtl:rounded-r-md rtl:rounded-l-none">
+                    التالي
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <footer class="themed-footer py-8 text-center mt-12">
+        <div class="container mx-auto px-6">
+            <p>© <span id="currentYearLawyerDir"></span> K11 Production. جميع الحقوق محفوظة لتطبيق أفوكادو.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('currentYearLawyerDir').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
